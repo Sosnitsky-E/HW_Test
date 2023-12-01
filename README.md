@@ -25,3 +25,8 @@ For the API testing part, create a test that retrieves the weather forecast for 
 - **Run the test**: Execute the test that retrieves the weather for this zip code.
 - **Verify the results**: Ensure that the results are within a 10% range of the expected outcome.
 
+### How to wor with this repository
+- Clone repository to your machine
+- Create virtual environment
+- Run command pip install -r requirements.txt
+- To tun tests execute pytest -s -v path to tests

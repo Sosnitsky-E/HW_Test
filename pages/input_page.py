@@ -8,7 +8,7 @@ class InputPage(BasePage):
 
     # The method generates a random number for input into the converter.
     def fill_input(self):
-        num = RandomNum.random_num()
+        num = RandomNum.random_num(self)
         self.fill_in_field(Loc.ARGUMENT_CONV_INPUT, num)
         return num
 

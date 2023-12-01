@@ -8,7 +8,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 @pytest.fixture()
 def chrome_options():
     options = Options()
-    options.add_argument('--headless')
+    # options.add_argument('--headless')
+    options.page_load_strategy = 'none'
+    options.add_argument('--disable-popup-blocking')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     return options
