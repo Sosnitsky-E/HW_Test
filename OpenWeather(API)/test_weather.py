@@ -22,7 +22,7 @@ historical_monthly_temps = {
 }
 
 
-@pytest.mark.parametrize("zip_code", ["20852"])  # Параметры для теста
+@pytest.mark.parametrize("zip_code", ["20852"])  # Test parameters
 def test_weather(zip_code):
     current_month = datetime.now().month
     expected_temp_range = historical_monthly_temps.get(current_month)
