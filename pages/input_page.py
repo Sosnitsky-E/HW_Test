@@ -24,6 +24,7 @@ class InputPage(BasePage):
     def meters_to_feet(self, meters):
         return meters * 3.28084
 
+
     def fill_input_value_grams(self):
         self.fill_in_field(WeightLoc.WEIGHT, 'grams')
 
