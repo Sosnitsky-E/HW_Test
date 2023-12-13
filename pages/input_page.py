@@ -7,7 +7,7 @@ from locators import WeightConversionPageLocators as WeightLoc
 class InputPage(BasePage):
 
     # The method generates a random number for input into the converter.
-    def fill_input(self):
+    def fill_input(self) -> int:
         num = RandomNum.random_num(self)
         self.fill_in_field(Loc.ARGUMENT_CONV_INPUT, num)
         return num
@@ -17,13 +17,12 @@ class InputPage(BasePage):
         return self.get_text(Loc.ANSWER)
 
     # The method converts a temperature value from Celsius to Fahrenheit.
-    def celsius_to_fahrenheit(self, celsius):
+    def celsius_to_fahrenheit(self, celsius: int) -> float:
         return (celsius * 9 / 5) + 32
 
     # The method converts a length value from meters to feet.
-    def meters_to_feet(self, meters):
+    def meters_to_feet(self, meters: int) -> float:
         return meters * 3.28084
-
 
     def fill_input_value_grams(self):
         self.fill_in_field(WeightLoc.WEIGHT, 'grams')
@@ -32,5 +31,5 @@ class InputPage(BasePage):
         self.action_move_to_element_click(WeightLoc.CONVERT_BTN)
 
     # The method converts a weight value from ounces to grams.
-    def ounces_to_grams(self, ounces):
+    def ounces_to_grams(self, ounces: int) -> float:
         return ounces * 28.3495231
