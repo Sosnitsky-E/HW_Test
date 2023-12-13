@@ -4,7 +4,7 @@ from api_weather import WeatherApi
 from info_weather import WeatherInfo
 
 
-@pytest.mark.parametrize("zip_code", ["20852"])
+@pytest.mark.parametrize("zip_code", ["20852"])  # Test parameters
 def test_weather(zip_code):
     current_month = datetime.now().month
 
